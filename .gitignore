@@ -1,0 +1,43 @@
+# Ignore Python cache directories
+__pycache__/
+.claude/
+.vscode/
+
+# Ignore workspace-specific directories
+experiment_log/
+llm_log/
+results/
+
+# Ignore database files except python scripts
+database/*
+!database/*.py
+
+# Claude code temp files
+tmpclaude*
+
+# LaTeX temporary files
+latex_manuscript/*
+!latex_manuscript/main.tex
+!latex_manuscript/references.bib
+
+# Ignore local settings files
+.claude/settings.local.json
+
+# Ignore workspace directories
+*workspace*/
+
+# Environment / secrets
+.env
+API_key.txt
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Meta-agent state (runtime generated)
+meta_agent/

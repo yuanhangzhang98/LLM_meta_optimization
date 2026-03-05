@@ -1,0 +1,4 @@
+Develop an algorithm that efficiently solves hard, large-scale 3-SAT problems. 
+Prioritize robust scaling, with focus on large-N behaviors. 
+Aim for polynomial step vs. N scaling, ideally sub-quadratic.
+Common pitfall: polynomial at small N, exponentially diverging at large N. 

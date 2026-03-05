@@ -1,0 +1,316 @@
+{
+  "0": {
+    "objective_id": 0,
+    "description": "Extrapolation using R²-weighted power law and exponential fits to estimate log10(median steps) at N=2000",
+    "created_round": 0,
+    "created_timestamp": "2025-12-28T18:50:05.792103Z"
+  },
+  "1": {
+    "objective_id": 1,
+    "description": "Predict log10 expected steps at N=2000 incl. scaling+reliability",
+    "created_round": 1,
+    "created_timestamp": "2026-01-16T19:58:06.748106Z",
+    "source_workspace": "workspace_22",
+    "source_objective_id": 1
+  },
+  "2": {
+    "objective_id": 2,
+    "description": "Log10 expected steps@2000 with reliability-adjusted cost + coverage",
+    "created_round": 2,
+    "created_timestamp": "2026-01-18T00:22:56.510157Z",
+    "source_workspace": "workspace_22",
+    "source_objective_id": 2
+  },
+  "3": {
+    "objective_id": 3,
+    "description": "AIC-mixed scaling to predict log10 steps@2000 with smooth fail/coverage",
+    "created_round": 3,
+    "created_timestamp": "2026-01-19T15:43:26.936811Z",
+    "source_workspace": "workspace_22",
+    "source_objective_id": 3
+  },
+  "4": {
+    "objective_id": 4,
+    "description": "Predict log10 steps@2000 with smooth reliability & cap penalties",
+    "created_round": 4,
+    "created_timestamp": "2026-01-20T22:57:15.662891Z",
+    "source_workspace": "workspace_22",
+    "source_objective_id": 4
+  },
+  "5": {
+    "objective_id": 5,
+    "description": "log10 expected steps@2000 with scaling+reliability-margin penalties",
+    "created_round": 5,
+    "created_timestamp": "2026-01-22T09:50:45.168067Z",
+    "source_workspace": "workspace_22",
+    "source_objective_id": 5
+  },
+  "6": {
+    "objective_id": 6,
+    "description": "Predict log10 expected steps at N=2000 incl. success-rate + scaling",
+    "created_round": 1,
+    "created_timestamp": "2026-01-26T02:07:46.914310Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 1
+  },
+  "7": {
+    "objective_id": 7,
+    "description": "Censor-aware AIC model avg scaling to N=2000 w/ failure lower-bounds",
+    "created_round": 2,
+    "created_timestamp": "2026-01-26T10:10:30.390791Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 2
+  },
+  "8": {
+    "objective_id": 8,
+    "description": "Predict log10 expected steps at N=2000 with success+scaling+coverage",
+    "created_round": 3,
+    "created_timestamp": "2026-01-26T13:31:20.825891Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 3
+  },
+  "9": {
+    "objective_id": 9,
+    "description": "AIC-avg log10 expected solve-steps at N=2000 incl. success+coverage",
+    "created_round": 4,
+    "created_timestamp": "2026-01-26T20:50:06.260300Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 4
+  },
+  "10": {
+    "objective_id": 10,
+    "description": "AIC-avg robust scaling to log10 expected steps@2000 + reliability",
+    "created_round": 5,
+    "created_timestamp": "2026-01-26T23:04:04.524576Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 5
+  },
+  "11": {
+    "objective_id": 11,
+    "description": "AIC-avg log10(restart-steps)@2000 + smooth reliability margin",
+    "created_round": 6,
+    "created_timestamp": "2026-01-27T02:41:07.507725Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 6
+  },
+  "12": {
+    "objective_id": 12,
+    "description": "AIC-avg log10 expected restart-steps@2000 + slope & reliability",
+    "created_round": 7,
+    "created_timestamp": "2026-01-27T07:48:54.762143Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 7
+  },
+  "13": {
+    "objective_id": 13,
+    "description": "Predict log10(p-adjusted steps@2000) with smooth coverage & slope penalties",
+    "created_round": 8,
+    "created_timestamp": "2026-01-27T12:42:52.029956Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 8
+  },
+  "14": {
+    "objective_id": 14,
+    "description": "Predict log10 restart-steps@2000 with reliability margin & censoring",
+    "created_round": 9,
+    "created_timestamp": "2026-01-28T06:13:22.166293Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 9
+  },
+  "15": {
+    "objective_id": 15,
+    "description": "AIC-weighted censored scaling fit of restart-steps to N=2000",
+    "created_round": 10,
+    "created_timestamp": "2026-01-28T09:30:29.379130Z",
+    "source_workspace": "workspace_24",
+    "source_objective_id": 10
+  },
+  "16": {
+    "objective_id": 16,
+    "description": "Minimize extrapolated log-steps at a larger reference N while penalizing near-threshold failure rates and step-budget saturation, with a reward for reaching larger N.",
+    "created_round": 1,
+    "created_timestamp": "2026-02-02T14:12:20.898692Z",
+    "source_workspace": "workspace_32",
+    "source_objective_id": 1
+  },
+  "17": {
+    "objective_id": 17,
+    "description": "Minimize a composite score: (i) maximize effective solved size Neff at unsolved≤0.4 (hard+soft), (ii) penalize above-threshold unsolved smoothly (N-weighted, uncertainty-aware), and (iii) minimize scaling via log‑TTS and fitted log(step)~p log(N) slope.",
+    "created_round": 1,
+    "created_timestamp": "2026-02-03T14:55:11.268319Z",
+    "source_workspace": "workspace_33",
+    "source_objective_id": 1
+  },
+  "18": {
+    "objective_id": 18,
+    "description": "Composite score prioritizing robust high-N solves (u<=0.3/0.2), while tie-breaking by weighted unsolved/step-efficiency, penalizing brittleness near 0.5, and favoring low scaling exponent at top-N.",
+    "created_round": 1,
+    "created_timestamp": "2026-02-04T16:40:51.817252Z",
+    "source_workspace": "workspace_34",
+    "source_objective_id": 1
+  },
+  "19": {
+    "objective_id": 19,
+    "description": "Soft-pass area (u≈0.5) + top-level reward + success-only scaling penalty, with strong anti-truncation (few levels / small largest N) so timeouts can’t look good.",
+    "created_round": 2,
+    "created_timestamp": "2026-02-04T23:07:49.469976Z",
+    "source_workspace": "workspace_34",
+    "source_objective_id": 2
+  },
+  "20": {
+    "objective_id": 20,
+    "description": "Reach-maximization (hard fail if break before 640 and, when medium/high present, before 1280) with tie-break log10(median_step) at max successful N plus tail log-log slope+slack penalties over top successful Ns",
+    "created_round": 1,
+    "created_timestamp": "2026-02-05T09:34:28.044110Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 1
+  },
+  "21": {
+    "objective_id": 21,
+    "description": "Maximize largest successful N (reach) with smooth tie-breakers: budget-margin/slack on last successes, conservative predicted next-N clearance margin, and tail curvature penalty from log-step scaling on successful prefix only.",
+    "created_round": 2,
+    "created_timestamp": "2026-02-05T21:52:47.563112Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 2
+  },
+  "22": {
+    "objective_id": 22,
+    "description": "Minimize (-log2 clearance N*) + weighted near-budget tail penalty, using only the successful prefix (unsolved_fraction<0.5) to favor headroom to 1280+ without penalizing unsolved_fraction≈0.49.",
+    "created_round": 3,
+    "created_timestamp": "2026-02-06T01:50:24.237480Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 3
+  },
+  "23": {
+    "objective_id": 23,
+    "description": "Maximize reachable N while conservatively (worst-of-multi-fit) minimizing predicted median_step/schedule_budget clearance at N=1280(+2560) and penalizing near-budget tail slack and worsening log-log trends.",
+    "created_round": 4,
+    "created_timestamp": "2026-02-06T08:23:07.608704Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 4
+  },
+  "24": {
+    "objective_id": 24,
+    "description": "Reach-dominant score using only successful-prefix data: maximize largest successful N plus conservative (worst-of w∈{2,3,5}) predicted earliest scheduled N where median_step/max_steps exceeds 0.7, with added penalty for last-step ratio “budget cliff” jumps.",
+    "created_round": 5,
+    "created_timestamp": "2026-02-06T17:24:52.292286Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 5
+  },
+  "25": {
+    "objective_id": 25,
+    "description": "Reach proxy: maximize robust scheduled N* with worst-window predicted median_step/max_steps ≤0.60 (ratio-space clearance), plus tail-hazard penalties for sudden end-of-prefix scaling accelerations.",
+    "created_round": 6,
+    "created_timestamp": "2026-02-07T00:19:56.654979Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 6
+  },
+  "26": {
+    "objective_id": 26,
+    "description": "Gated (N_max≥453) tail-only headroom-to-1280 score: last-step ratio + worst-window predicted ratios at 905/1280 (safety≈0.68) plus tail slope/curvature penalties; otherwise smooth large penalty.",
+    "created_round": 7,
+    "created_timestamp": "2026-02-07T10:50:38.294271Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 7
+  },
+  "27": {
+    "objective_id": 27,
+    "description": "Tail-local polynomial scaling and budget-clearance robustness using only the successful prefix: penalize local log-log step exponents >2 and positive acceleration, plus low/unstable log(max_steps/median_step) margins near the tail.",
+    "created_round": 8,
+    "created_timestamp": "2026-02-07T21:17:56.948903Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 8
+  },
+  "28": {
+    "objective_id": 28,
+    "description": "Gated two-jump headroom at the 640→905→1280 schedule: from last 2–3 successes estimate local exponent k and penalize k>2 plus predicted median/max_steps overshoot (>0.65) at 905 & 1280, with extra penalty if any failure (unsolved_fraction≥0.5) exists.",
+    "created_round": 9,
+    "created_timestamp": "2026-02-08T18:21:04.719086Z",
+    "source_workspace": "workspace_36",
+    "source_objective_id": 9
+  },
+  "29": {
+    "objective_id": 29,
+    "description": "Composite proxy prioritizing (i) largest N ever solved (unsolved_fraction<0.5), then (ii) low scaling exponent on successful Ns only, plus (iii) a censored step-extrapolation to N=2000 consistent with the first truly failed level.",
+    "created_round": 1,
+    "created_timestamp": "2026-02-12T02:53:10.779131Z",
+    "source_workspace": "workspace_37",
+    "source_objective_id": 1
+  },
+  "30": {
+    "objective_id": 30,
+    "description": "Composite reach+scaling score with secondary headroom-on-success and frontier-robustness terms around the unsolved_fraction=0.5 threshold (no penalty for 0.49).",
+    "created_round": 2,
+    "created_timestamp": "2026-02-14T20:09:38.561005Z",
+    "source_workspace": "workspace_37",
+    "source_objective_id": 2
+  },
+  "31": {
+    "objective_id": 31,
+    "description": "Schedule-faithful lexicographic score: (1) maximize max_solved_N, then (2) minimize log10(best median_step) at max_solved_N, then (3) minimize robust log-log slope on successful points, plus (4) censor penalty from first true fail (N_fail,max_steps_fail); also exposes an area-under-passed-levels helper.",
+    "created_round": 3,
+    "created_timestamp": "2026-02-17T14:20:31.352355Z",
+    "source_workspace": "workspace_37",
+    "source_objective_id": 3
+  },
+  "32": {
+    "objective_id": 32,
+    "description": "Successful-prefix tail headroom score: minimize conservative (worst-window) predicted median_step/max_steps overshoot for the next 1–2 scheduled N jumps, plus tail slope and explicit budget-cliff penalties, with one censor constraint from the first true failure.",
+    "created_round": 1,
+    "created_timestamp": "2026-02-19T04:25:50.553300Z"
+  },
+  "33": {
+    "objective_id": 33,
+    "description": "Schedule-faithful lexicographic reach (max cleared N) with strong tail headroom tie-break (median/max_steps over last 2–4 successes), budget-cliff penalty, and conservative worst-window next-N clearance in log-ratio space (esp. 1280→1810→2560).",
+    "created_round": 2,
+    "created_timestamp": "2026-02-19T09:11:24.273039Z"
+  },
+  "34": {
+    "objective_id": 34,
+    "description": "Reach-dominant, schedule-faithful score: maximize cleared scheduled N (uf<0.5 only), tie-break by tail median_step/max_steps headroom, conservative worst-window next-N (esp. 1810/2560) budget-overshoot, and tail budget-cliff; optional single censor-consistency from first uf>=0.5.",
+    "created_round": 3,
+    "created_timestamp": "2026-02-19T11:14:08.966080Z"
+  },
+  "35": {
+    "objective_id": 35,
+    "description": "Reach-dominant, schedule-faithful score using only uf<0.5 (success) with tail-heavy median_step/schedule_budget headroom, conservative worst-window predictions at 1810/2560, explicit budget-cliff hazard, and one censor-consistency check from first uf>=0.5.",
+    "created_round": 4,
+    "created_timestamp": "2026-02-19T13:57:47.325850Z"
+  },
+  "36": {
+    "objective_id": 36,
+    "description": "Reach-dominant, schedule-faithful proxy: maximize cleared scheduled N (uf<0.5 only), then minimize a smooth-max of median_step/schedule_budget over last-3 clears plus conservative worst-window predictions for next-2 Ns (esp. 1810/2560), with explicit budget-cliff hazard (905→1280→1810) and repeat-run stability penalties (pass/fail + headroom only).",
+    "created_round": 5,
+    "created_timestamp": "2026-02-19T15:47:18.119228Z"
+  },
+  "37": {
+    "objective_id": 37,
+    "description": "Schedule-faithful reach (max cleared scheduled N; pass iff unsolved_fraction<0.5) with smooth-max tie-break minimizing median_step/schedule_budget headroom on last-3 clears + conservative next-2-N predictions (focus 1280→1810→2560), plus tail hazard (905→1280→1810) and tiny repeat-stability penalty.",
+    "created_round": 6,
+    "created_timestamp": "2026-02-20T07:25:54.304168Z"
+  },
+  "38": {
+    "objective_id": 38,
+    "description": "Schedule-faithful reach (uf<0.5 only) with tie-break minimizing smooth-max headroom ratio median_step/schedule_budget over last-3 cleared + conservative worst-window prediction at N=2560, plus tail-local exponent(k>2) and post-1280 budget-cliff hazard; failures used only for one censor lower-bound check.",
+    "created_round": 7,
+    "created_timestamp": "2026-02-21T12:18:58.840671Z"
+  },
+  "39": {
+    "objective_id": 39,
+    "description": "Schedule-faithful reach (-max cleared scheduled N; pass iff uf<0.5) with tie-break minimizing smooth-max log(median_step/schedule_budget) over last-3 clears + conservative worst-window preds@2560 (+@1810 if not cleared), plus explicit budget-cliff hazard penalties on log-ratio jumps 905→1280→1810 and 1810→2560 (predicted if unobserved).",
+    "created_round": 8,
+    "created_timestamp": "2026-02-22T14:32:59.597435Z"
+  },
+  "40": {
+    "objective_id": 40,
+    "description": "Schedule-faithful reach (max cleared scheduled N via uf<0.5 only) with tie-breaks: smooth-max log(headroom)=log(median_step/schedule_budget) on last clears + conservative preds@1810/2560, explicit budget-cliff hazard (905→1280→1810→2560), and optional repeat-robustness.",
+    "created_round": 9,
+    "created_timestamp": "2026-02-23T06:33:08.945258Z"
+  },
+  "41": {
+    "objective_id": 41,
+    "description": "Schedule-faithful reach (-max cleared scheduled N; pass iff uf<0.5) with tie-break smooth-max log(median_step/schedule_budget) on last-3 clears + conservative preds@{1810,2560}, plus gated multi-jump hazard (905→1280→1810→2560) and optional repeat-robustness/censor-check.",
+    "created_round": 10,
+    "created_timestamp": "2026-02-24T07:44:32.134420Z"
+  }
+}

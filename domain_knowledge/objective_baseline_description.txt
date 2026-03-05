@@ -1,0 +1,1 @@
+Extrapolation using R²-weighted power law and exponential fits to estimate log10(median steps) at N=2000

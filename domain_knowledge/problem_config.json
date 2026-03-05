@@ -1,0 +1,37 @@
+{
+  "problem_name": "3SAT_DMM",
+  "problem_description": "Digital MemComputing Machine for 3-SAT problem solving",
+
+  "solver_components": [
+    {
+      "name": "VARIABLES_SPEC",
+      "type": "dict",
+      "description": "Variable specification dictionary",
+      "required": true
+    },
+    {
+      "name": "HYPER_SPACE",
+      "type": "dict",
+      "description": "Hyperparameter search space",
+      "required": true
+    },
+    {
+      "name": "_grad_single",
+      "type": "function",
+      "description": "Gradient computation function",
+      "required": true
+    }
+  ],
+
+  "required_imports": [
+    "torch"
+  ],
+
+  "metric_entry_point": "metric.metric",
+
+  "tunable_component_name": "HYPER_SPACE",
+
+  "baseline_filename": "solver_baseline.py",
+
+  "framework_module": "sat_solver"
+}

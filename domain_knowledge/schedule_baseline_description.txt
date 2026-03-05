@@ -1,0 +1,1 @@
+Adaptive scaling: for each N, if solved half (unsolved_fraction < 0.5) within max_steps, conclude current N, increase N/max_steps; else conclude current fidelity and promote fidelity if good performance. 3 fidelity levels (low/medium/high budgets)
