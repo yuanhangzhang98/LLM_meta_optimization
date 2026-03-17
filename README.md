@@ -2,11 +2,15 @@
 
 Code for the paper: *Scientific discovery as meta-optimization: a combinatorial optimization case study*
 by Yuan-Hang Zhang, Chesson Sipling, and Massimiliano Di Ventra.
-[arXiv link available soon!]
+[[Paper](https://www.researchsquare.com/article/rs-9108409/v1)]
 
 An LLM-driven automated research system that simultaneously optimizes both solutions and the evaluation criteria used to guide the search. Multiple LLM-generated proxy objectives are aggregated through a correlation-weighted consensus mechanism that self-corrects against reward hacking and Goodhart's law.
 
 **Case study result**: Applied to 3-SAT algorithm discovery, the system reduced the scaling exponent of a Digital MemComputing Machine solver from N<sup>2.51</sup> to N<sup>1.33</sup> (~67x speedup on the largest tested instances), exploring 414 solver designs under guidance of 42 co-evolving objectives.
+
+## Claude Code Skill
+
+A ready-to-use [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill implementing the meta-optimization algorithm is available at **[yuanhangzhang98/meta-discovery](https://github.com/yuanhangzhang98/meta-discovery)**. Install the skill to apply the framework to your own project directly from the command line, without needing to set up this codebase manually.
 
 ## Architecture
 
@@ -157,3 +161,19 @@ The framework is **problem-agnostic**. To apply it to a different research probl
 | `schedule_baseline.py` | Multi-fidelity experiment schedules |
 
 The core workflow, database, agents, prompts, consensus objective, and MCGS algorithm require no modification.
+
+## Citation
+
+```bibtex
+@article{zhang2026scientific,
+  title={Scientific discovery as meta-optimization: a combinatorial optimization case study},
+  author={Zhang, Yuan-Hang and Sipling, Chesson and Di Ventra, Massimiliano},
+  journal={Research Square preprint},
+  year={2026},
+  doi={10.21203/rs.3.rs-9108409/v1}
+}
+```
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
