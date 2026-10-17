@@ -1,0 +1,14 @@
+# Versions observed in the retained rebuttal execution environment (Python 3.9.13).
+# Select a suitable CPU/CUDA PyTorch wheel for the target machine separately.
+numpy==1.23.1
+scipy==1.9.1
+torch==2.6.0
+pydantic==2.11.7
+matplotlib==3.9.4
+scikit-learn==1.1.2
+HEBO==0.3.6
+pymoo==0.6.0
+gpytorch==1.13
+GPy==1.13.2
+catboost==1.2.8
+openai==1.88.0

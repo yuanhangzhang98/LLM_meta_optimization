@@ -41,3 +41,6 @@ Thumbs.db
 
 # Meta-agent state (runtime generated)
 meta_agent/
+
+# Local Python environment
+.venv/

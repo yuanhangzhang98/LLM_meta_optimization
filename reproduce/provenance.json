@@ -1,0 +1,39 @@
+{
+  "source": "TMLR/arXiv revision package accompanying manuscript commit b0314a0",
+  "source_repository": "https://github.com/yuanhangzhang98/LLM_automated_discovery",
+  "scope": "Additive offline reproduction tools; experimental algorithms and recorded measurements are unchanged.",
+  "files": {
+    "analyze_campaign.py": {
+      "source_path": "release/core/analyze_campaign.py",
+      "source_sha256": "e25ff0eea025ebac577215fa31c98797f850624c7351d183d9da692f1998cc01"
+    },
+    "analyze_objective0.py": {
+      "source_path": "release/data/analysis/analyze_objective0.py",
+      "source_sha256": "632ebae9c162013ea997ce15b3dfe773c1989c6430b2e8c19bc1897071bda482"
+    },
+    "restore_design_figure.py": {
+      "source_path": "release/data/figuredata/restore_design_figure.py",
+      "source_sha256": "bdebc2547ea23a838a2835b0a9e51e24b10ac3fae4109dab9d6f89b0b972e8bf"
+    },
+    "plot_genealogy.py": {
+      "source_path": "release/data/figuredata/plot_genealogy.py",
+      "source_sha256": "0d286ff4b2c54664b29e84e27f8fa37675e20c9cfe33b2330dcca933fa1baea8"
+    },
+    "requirements-historical.txt": {
+      "source_path": "release/core/requirements.txt",
+      "source_sha256": "f1a51ae1d14a49b15701bdb283b28f50241f0568e54e1184ae616fa7d5441799"
+    },
+    "requirements.txt": {
+      "source_path": "release/core/requirements-analysis.txt",
+      "source_sha256": "6ad7d7f04273de72fb50783f7f174ccca17767a3fcdea002ed3393ab1f8dbcf1"
+    }
+  },
+  "adjustments": {
+    "analyze_campaign.py": "Load runtime modules from the repository root and default campaign inputs to reproduce/artifacts/data/campaign; permit output under reproduce/output. Disable bytecode generation so imported archived objectives remain read-only.",
+    "analyze_objective0.py": "Default data inputs to reproduce/artifacts/data and baseline source to repository root; report missing input and protect archived inputs.",
+    "restore_design_figure.py": "Default data inputs to reproduce/artifacts/data/figuredata/figure_data and output to reproduce/output/figure3.pdf; use public author metadata.",
+    "plot_genealogy.py": "Use public author metadata.",
+    "requirements-historical.txt": "Unchanged recorded dependency versions, kept separate from active runtime requirements.",
+    "requirements.txt": "NumPy, SciPy, and Matplotlib subset of release/core/requirements-analysis.txt; the only scientific dependencies used by these offline tools."
+  }
+}

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite the paper and record the release tag when using these code or data."
+title: "Scientific discovery as meta-optimization: a combinatorial optimization case study"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Yuan-Hang
+  - family-names: Sipling
+    given-names: Chesson
+  - family-names: Di Ventra
+    given-names: Massimiliano
+repository-code: "https://github.com/yuanhangzhang98/LLM_meta_optimization"
+url: "https://github.com/yuanhangzhang98/LLM_meta_optimization/releases/tag/paper-2026-10-17"
+version: "paper-2026-10-17"
+date-released: 2026-10-17
+license: MIT
+preferred-citation:
+  type: article
+  title: "Scientific discovery as meta-optimization: a combinatorial optimization case study"
+  authors:
+    - family-names: Zhang
+      given-names: Yuan-Hang
+    - family-names: Sipling
+      given-names: Chesson
+    - family-names: Di Ventra
+      given-names: Massimiliano
+  year: 2026
+  journal: arXiv
+  doi: "10.48550/arXiv.2606.26728"
+  url: "https://arxiv.org/abs/2606.26728"

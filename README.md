@@ -2,11 +2,15 @@
 
 Code for the paper: *Scientific discovery as meta-optimization: a combinatorial optimization case study*
 by Yuan-Hang Zhang, Chesson Sipling, and Massimiliano Di Ventra.
-[[Paper](https://www.researchsquare.com/article/rs-9108409/v1)]
+[[arXiv](https://arxiv.org/abs/2606.26728)]
+[[Revised manuscript](https://github.com/yuanhangzhang98/LLM_meta_optimization/releases/download/paper-2026-10-17/manuscript.pdf)]
+[[Code and data release](https://github.com/yuanhangzhang98/LLM_meta_optimization/releases/tag/paper-2026-10-17)]
 
-An LLM-driven automated research system that simultaneously optimizes both solutions and the evaluation criteria used to guide the search. Multiple LLM-generated proxy objectives are aggregated through a correlation-weighted consensus mechanism that self-corrects against reward hacking and Goodhart's law.
+An LLM-driven automated research system that simultaneously optimizes both solutions and the evaluation criteria used to guide the search. Multiple LLM-generated proxy objectives are aggregated through correlation-weighted voting, allowing evaluation criteria to evolve while reducing dependence on any one proxy.
 
-**Case study result**: Applied to 3-SAT algorithm discovery, the system reduced the scaling exponent of a Digital MemComputing Machine solver from N<sup>2.51</sup> to N<sup>1.33</sup> (~67x speedup on the largest tested instances), exploring 414 solver designs under guidance of 42 co-evolving objectives.
+**Case study result:** On fresh planted 3-SAT instances with 2,560 variables, consensus-discovered design 340 uses **more than 38× fewer median integration steps** than a separately tuned baseline under the same memory bound. The original search contains 414 solver designs and 42 objectives. Objective ablations show that a fixed expert objective can also discover excellent solvers, including the lowest-median-step DMM solver tested at 2,560 variables, but with substantial observed run-to-run variation. Consensus retains useful expert guidance while reducing vulnerability to favorable small-size extrapolation.
+
+The [17 October 2026 release](https://github.com/yuanhangzhang98/LLM_meta_optimization/releases/tag/paper-2026-10-17) contains the revised manuscript, original measurements, additional objective-ablation runs, and offline verification tools. See the [reproduction guide](reproduce/README.md) to check the tables and regenerate Figure 3 without running discovery experiments. The original code release is preserved at [`paper-original`](https://github.com/yuanhangzhang98/LLM_meta_optimization/tree/paper-original).
 
 ## Claude Code Skill
 
@@ -37,6 +41,8 @@ A ready-to-use [Claude Code](https://docs.anthropic.com/en/docs/claude-code) ski
 
 **Requirements**: Python 3.10, CUDA-capable GPU (for PyTorch solver execution)
 
+Use a PyTorch wheel compatible with your operating system and CUDA installation.
+
 ```bash
 # Create conda environment
 conda create -n meta_opt python=3.10
@@ -50,6 +56,11 @@ export OPENAI_API_KEY="your-key-here"
 ```
 
 > **Note**: HEBO requires `numpy<1.25` and `Python<=3.10`. These constraints are pinned in `requirements.txt`.
+
+Offline reproduction needs only the smaller dependency set in
+[`reproduce/requirements.txt`](reproduce/requirements.txt). The recorded
+experiment environment is documented separately in
+[`reproduce/requirements-historical.txt`](reproduce/requirements-historical.txt).
 
 ## Quick Start
 
@@ -90,6 +101,9 @@ Key arguments:
 │   ├── evaluate_objectives.py   # Objective evaluation
 │   ├── plot_dag.py              # Design genealogy visualization
 │   └── plot_scaling.py          # Scaling analysis plots
+│
+├── reproduce/                  # Revised-paper analysis and figure tools
+│   └── README.md               # Download data and reproduce the reported results
 │
 ├── workflow/
 │   ├── iteration.py             # Planner + Designer agent workflows
@@ -165,14 +179,21 @@ The core workflow, database, agents, prompts, consensus objective, and MCGS algo
 ## Citation
 
 ```bibtex
-@article{zhang2026scientific,
+@misc{zhang2026scientific,
   title={Scientific discovery as meta-optimization: a combinatorial optimization case study},
   author={Zhang, Yuan-Hang and Sipling, Chesson and Di Ventra, Massimiliano},
-  journal={Research Square preprint},
   year={2026},
-  doi={10.21203/rs.3.rs-9108409/v1}
+  eprint={2606.26728},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  doi={10.48550/arXiv.2606.26728},
+  url={https://arxiv.org/abs/2606.26728}
 }
 ```
+
+For the exact code and evidence used with the revised manuscript, also record
+the release tag `paper-2026-10-17`. The release includes the corresponding PDF
+and LaTeX source while the arXiv replacement is being prepared.
 
 ## License
 

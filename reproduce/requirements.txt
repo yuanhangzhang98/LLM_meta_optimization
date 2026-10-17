@@ -1,0 +1,5 @@
+# Minimal offline subset of the prepared requirements-analysis.txt.
+# No GPU, HEBO, or API client is required. Figure 3 also needs Graphviz dot.
+numpy>=1.23,<2
+scipy>=1.9,<2
+matplotlib>=3.5,<4
